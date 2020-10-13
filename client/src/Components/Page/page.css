@@ -1,0 +1,17 @@
+.page {
+  width: 90%;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.page p.back {
+  font-size: 15px;
+  color: var(--main);
+  cursor: pointer;
+}
+
+.page h1.title {
+  padding: 20px 0;
+  font-size: 50px;
+}
