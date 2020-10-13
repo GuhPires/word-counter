@@ -1,0 +1,19 @@
+.text-input {
+  grid-row: 2 / span 2;
+}
+
+.text-input textarea {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  font-size: 16px;
+  background-color: var(--white);
+  border: none;
+  border-radius: 20px;
+  color: var(--black);
+  resize: none;
+}
+
+.text-input textarea::placeholder {
+  color: var(--gray);
+}
