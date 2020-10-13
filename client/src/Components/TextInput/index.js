@@ -12,9 +12,7 @@ export default function TextInput() {
 
   return (
     <div className="text-input">
-      <textarea placeholder="Type or paste text in here..." onChange={e => onType(e)}>
-        {text}
-      </textarea>
+      <textarea placeholder="Type or paste text in here..." onChange={e => onType(e)} value={text} />
     </div>
   )
 }
