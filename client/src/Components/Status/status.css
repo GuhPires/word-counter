@@ -1,0 +1,35 @@
+.status {
+  width: 180px;
+  padding: 5px 0;
+}
+
+.status .text {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.status .text p {
+  font-size: 14px;
+}
+
+.status .text p span {
+  font-style: italic;
+  color: var(--main);
+}
+
+.status .progress {
+  width: 100%;
+  height: 8px;
+  margin: 5px 0;
+  background-color: var(--white);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.status .progress > span {
+  height: 100%;
+  background-color: var(--main-dark);
+  display: block;
+  position: relative;
+}
