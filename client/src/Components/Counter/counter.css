@@ -1,0 +1,37 @@
+.counter {
+  height: calc(80vh - 20px);
+}
+
+.counter .words {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.counter .words h2 {
+  font-size: 45px;
+}
+
+.counter .words h3 {
+  font-size: 30px;
+  font-weight: normal;
+  color: var(--black);
+}
+
+.counter .info p {
+  padding: 5px 0;
+  font-size: 20px;
+}
+
+.counter .info p span {
+  font-weight: bold;
+  color: var(--main-dark);
+}
+
+.counter .most-used {
+  padding: 15px 0;
+}
+
+.counter .most-used > p {
+  font-size: 15px;
+  font-style: italic;
+}

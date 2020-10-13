@@ -3,18 +3,27 @@
   min-height: 100vh;
   margin: 0 auto;
   padding: 20px 0;
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-template-rows: 1fr 3fr;
 }
 
-.page p.back {
+.page .heading {
+  height: calc(20vh - 20px);
+}
+
+.page .heading p {
   font-size: 15px;
   color: var(--main);
   cursor: pointer;
 }
 
-.page h1.title {
+.page .heading h1 {
   padding: 20px 0;
   font-size: 50px;
+}
+
+.page .content {
+  height: calc(80vh - 20px);
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 1fr 3fr;
+  column-gap: 25px;
 }
