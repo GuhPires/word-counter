@@ -7,12 +7,13 @@ class AppProvider extends Component {
     super(props);
     this.state = {
       theme: 'Light',
+      text: "",
       wordsObj: {},
       words: 0,
       chars: 0,
       spaces: 0,
-      paragraphs: 0,
-      numbers: 0
+      numbers: 0,
+      paragraphs: 0
     }
     this.ctxActions = {
       theme: {
@@ -27,7 +28,11 @@ class AppProvider extends Component {
               break;
           }
         }
-      }
+      },
+      text: {
+        type: txt => this.setState({ text: txt }),
+        countAll: (wordsObj, words, chars, spaces, numbers, paragraphs) => this.setState({ wordsObj, words, chars, spaces, numbers, paragraphs })
+      },
     }
   }
   render() {
