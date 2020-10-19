@@ -23,7 +23,7 @@ class AppProvider extends Component {
               break;
             case 'Dark':
             default:
-              this.setState({ theme: 'Dark' });
+              this.setState({ theme: 'Light' });
               break;
           }
         }

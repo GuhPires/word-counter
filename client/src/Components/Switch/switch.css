@@ -17,8 +17,15 @@
   background-color: var(--theme-contrast);
   position: absolute;
   top: 2px;
-  right: 2px;
   cursor: pointer;
+}
+
+.switch.light .selector {
+  right: 2px;
+}
+
+.switch.dark .selector {
+  left: 2px;
 }
 
 .switch p {
