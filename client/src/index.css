@@ -10,11 +10,10 @@
 
 html {
   overflow-x: hidden;
-  background-color: var(--light-gray);
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: var(--main-dark);
+  color: var(--theme-main);
 }
 
 a {
@@ -39,6 +38,12 @@ button {
   cursor: pointer;
 }
 
+.App {
+  width: 100%;
+  height: 100%;
+  background-color: var(--theme-bg);
+}
+
 /* VARIABLES */
 
 :root {
@@ -50,4 +55,24 @@ button {
   --main-dark: #002054;
   --main: #184B9E;
   --main-light: #3B7EEB;
+}
+
+/* THEMES */
+
+.App.light {
+  --theme-main: var(--main-dark);
+  --theme-secondary: var(--main);
+  --theme-tertiary: var(--gray);
+  --theme-bg: var(--light-gray);
+  --theme-text: var(--black);
+  --theme-contrast: var(--white);
+}
+
+.App.dark {
+  --theme-main: var(--main-light);
+  --theme-secondary: var(--main-light);
+  --theme-tertiary: var(--white);
+  --theme-bg: var(--black);
+  --theme-text: var(--white);
+  --theme-contrast: var(--dark-gray);
 }

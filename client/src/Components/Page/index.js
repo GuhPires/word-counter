@@ -3,9 +3,9 @@ import Switch from '../Switch';
 
 import './page.css';
 
-export default function Page({ name, title, theme, customClass, children}) {
+export default function Page({ name, title, customClass, children}) {
   return (
-    <section id={name} className={`page${theme ? ' ' + theme : ''}${customClass ? ' ' + customClass : ''}`}>
+    <section id={name} className={`page${customClass ? ' ' + customClass : ''}`}>
       <div className="heading">
         <p>{'<'} back to gpires</p>
         <div className="opts">

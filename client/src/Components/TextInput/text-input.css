@@ -3,13 +3,13 @@
   height: 100%;
   padding: 20px;
   font-size: 16px;
-  background-color: var(--white);
+  background-color: var(--theme-contrast);
   border: none;
   border-radius: 20px;
-  color: var(--black);
+  color: var(--theme-text);
   resize: none;
 }
 
 .text-input textarea::placeholder {
-  color: var(--gray);
+  color: var(--theme-tertiary);
 }

@@ -14,21 +14,23 @@
 .counter .words h3 {
   font-size: 30px;
   font-weight: normal;
-  color: var(--black);
+  color: var(--theme-text);
 }
 
 .counter .info p {
   padding: 5px 0;
   font-size: 20px;
+  color: var(--theme-text);
 }
 
 .counter .info p span {
   font-weight: bold;
-  color: var(--main-dark);
+  color: var(--theme-main);
 }
 
 .counter .most-used {
   padding: 15px 0;
+  color: var(--theme-text);
 }
 
 .counter .most-used > p {
