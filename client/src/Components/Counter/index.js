@@ -29,9 +29,14 @@ export default function Counter() {
     setSpaces(spaces);
     setNumbers(numbers);
     setParagraphs(paragraphs);
-    console.log('Words: ', words, ' Chars: ', chars, ' Spaces: ', spaces, ' Numbers: ', numbers, ' Paragraphs: ', paragraphs);
 
-    let wordsObj = {};
+    let wordsObj = {...ctx.state.wordsObj};
+    if(spaces != ctx.state.spaces) {
+      wordsObj = {};
+      words.forEach(word => {
+        wordsObj[word.toLowerCase()] = wordsObj[word.toLowerCase()] >= 1 ? wordsObj[word.toLowerCase()]+= 1 : 1;
+      });
+    } if(chars === 0) wordsObj = {};
 
     ctx.text.countAll(wordsObj, words.length, chars, spaces, numbers, paragraphs);
   }

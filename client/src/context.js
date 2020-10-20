@@ -7,7 +7,7 @@ class AppProvider extends Component {
     super(props);
     this.state = {
       theme: 'Light',
-      text: "",
+      text: '',
       wordsObj: {},
       words: 0,
       chars: 0,
