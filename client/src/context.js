@@ -9,6 +9,7 @@ class AppProvider extends Component {
       theme: 'Light',
       text: '',
       wordsObj: {},
+      mostUsed: [],
       words: 0,
       chars: 0,
       spaces: 0,
