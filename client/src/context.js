@@ -32,7 +32,7 @@ class AppProvider extends Component {
       },
       text: {
         type: txt => this.setState({ text: txt }),
-        countAll: (wordsObj, words, chars, spaces, numbers, paragraphs) => this.setState({ wordsObj, words, chars, spaces, numbers, paragraphs })
+        countAll: (wordsObj, mostUsed, words, chars, spaces, numbers, paragraphs) => this.setState({ wordsObj, mostUsed,  words, chars, spaces, numbers, paragraphs })
       },
     }
   }

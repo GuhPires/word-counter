@@ -12,7 +12,7 @@ export default function Counter() {
   const [spacesCount, setSpaces] = useState(0);
   const [numbersCount, setNumbers] = useState(0);
   const [paragraphsCount, setParagraphs] = useState(0);
-  const [mostUsed, setMostUsed] = useState({});
+  const [mostUsed, setMostUsed] = useState([]);
 
   useEffect(() => {
     count(ctx.state.text)
@@ -42,18 +42,27 @@ export default function Counter() {
         }
         let idx = 0;
         for(const w of topUsed) {
-          console.log('IDX: ', idx);
-          if(wordsObj[word] > w.count) {
-            topUsed[idx] = { word, count: wordsObj[word] };
-            break;
+          if(wordsObj[word] > w.count || topUsed[idx].word === word) {
+            if(topUsed[idx].word === '' || idx >= topUsed.length - 1 || topUsed[idx].word === word) {
+              topUsed[idx] = { word, count: wordsObj[word] };
+              break;
+            } else {
+              const tmp = topUsed[idx];
+              topUsed[idx] = topUsed[idx] = { word, count: wordsObj[word] };
+              topUsed[idx + 1] = tmp;
+              break;
+            }
           }
           idx++;
         }
       });
-      console.log('Top Used: ', topUsed);
-    } if(chars === 0) wordsObj = {};
+    } if(chars === 0) {
+      wordsObj = {};
+      topUsed = [];
+    }
+    setMostUsed([...topUsed]);
 
-    ctx.text.countAll(wordsObj, words.length, chars, spaces, numbers, paragraphs);
+    ctx.text.countAll(wordsObj, topUsed, words.length, chars, spaces, numbers, paragraphs);
   }
 
   return (
@@ -70,7 +79,7 @@ export default function Counter() {
       </div>
       <div className="most-used">
         <p>MOST USED WORDS</p>
-        {Object.keys(mostUsed).map(word => <Status word={word} number={mostUsed[word]} value={mostUsed[word] / wordsCount} />)}
+        {mostUsed.map((data, idx) => <Status key={idx} word={data.word} number={data.count} value={((data.count / wordsCount) * 100).toFixed(2)} />)}
       </div>
     </div>
   )
