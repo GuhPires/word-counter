@@ -40,6 +40,7 @@ export default function Counter() {
         if(topUsed.length === 0) {
           for(let i = 0; i < 5; i++) topUsed.push({ word: '', count: 0 });
         }
+        // Some bugs and improvements needed in order to accurately count the most used words.
         let idx = 0;
         for(const w of topUsed) {
           if(wordsObj[word] > w.count || topUsed[idx].word === word) {
